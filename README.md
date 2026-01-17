@@ -1,48 +1,75 @@
-# Logistics Performance Diagnostic: Central Asia Region
+# 📦 Logistics Performance Diagnostic: Central Asia Region
 
-## 1. Project Overview
+### 📋 Executive Summary
 
-This project provides a data-driven diagnostic of the logistics performance in the Central Asia region. With a recorded late delivery rate of 67%, the analysis aims to identify systemic bottlenecks and distinguish between operational inefficiencies and capacity constraints.
+This project investigates a critical operational bottleneck: a 67% late delivery rate within the Central Asia region. By applying the Pareto Principle (80/20) and correlation analysis, I identified the "Vital Few" hotspots and provided strategic recommendations to optimize SLA compliance and restore brand reliability.
 
-## 2. Key Insights & Findings
+* **Core Problem:** High late delivery rates threatening customer trust and increasing operational overhead.
 
-### Segment 1: Shipping Mode & SLA Compliance
+* **Key Achievement:** Isolated the top 20% of locations responsible for 80% of delays and debunked the "Volume Overload" myth through statistical verification.
 
-* **First Class Failure:** Data reveals a 100% failure rate for First Class shipments, which consistently miss the premium 0-1 day delivery window, flat-lining at a 2-day median.
-* **Resource Misallocation:** "Standard Class" orders frequently arrive in 0-1 days (over-servicing), suggesting that resources are being diverted from priority express shipments to low-tier orders.
-* **Category Inconsistency:** High-value items like Electronics are prioritized (2-5 days), while other top categories regularly hit a 6-day delay cap.
+### 🎓 Project Context: Self-Study & Research
 
-### Segment 2: Regional Hotspots & Causality (Pareto & Correlation)
+*This is a personal research project developed for self-learning purposes.*
 
-* **The Vital Few (Key Accounts):** Using the **Pareto (80/20) Principle**, we identified that 85% of regional volume is driven by a small group of "Key Account" states (hubs with ≥ 23 orders).
-* **Process vs. Capacity:** A Correlation Analysis between order volume and late rates yielded $r \approx -0.15$. This near-zero correlation proves that higher volume does NOT cause more delays, confirming the issue is a process-driven failure rather than a lack of physical capacity.
+* **Objective:** To apply data analytics methodologies (Pareto, Correlation, EDA) to a real-world logistics dataset and practice end-to-end business problem-solving.
 
-### Segment 3: Temporal Trends & Data Integrity
+* **Scope:** The analysis is based on a publicly available dataset from Kaggle to simulate a business diagnostic process for educational and portfolio development.
+  
+* **AI Collaboration:** Developed with strategic assistance from AI tools for code optimization and documentation structure, ensuring rigorous statistical standards and professional reporting.
 
-* **Seasonal Bottleneck:** Late rates surge during Q4 (Holiday Season), peaking at 75% in December due to scalability issues.
-* **Statistical Outlier (August 2016):** A 100% late rate was recorded for this month; however, it was identified as a noise point with only **one order ($n=1$)**. This was excluded from the trend narrative to ensure statistical integrity.
+### 🛠️ Tech Stack & Methodology
 
-## 3. Data Source & Credit
-* **Dataset:** DataCo Smart Supply Chain Systems
-* **Source:** [Kaggle Repository](https://www.kaggle.com/datasets/shashwatwork/dataco-smart-supply-chain-for-big-data-analysis)
-* **Credits:** Original research data by Fabian Constante, Fernando Relvas, and Ianir Iakovlev. Curated for Kaggle by Shashwat Tiwari.
-* **License:** CC0: Public Domain
+* **Language:** Python (Pandas, Matplotlib, Seaborn).
 
-**Note:** The raw data file is too large for GitHub storage. To reproduce this analysis, please download the CSV from Kaggle and place it in the project root directory.
+* **Analytical Techniques:**
 
-## 4. Tech Stack & Methodology
-* **Environment:** Analyzed using Python 3 on Google Colab.
+  - **Pareto Principle (80/20 Rule):** Used to eliminate statistical noise and focus on high-impact geographic hotspots.
 
-* **Libraries Used:**
-  * Pandas: Data manipulation and column pruning (53 down to 10 columns).
-  * Seaborn & Matplotlib: Statistical visualizations (Boxplots, Scatter plots, Trendlines).
+  - **Pearson Correlation:** Evaluated the relationship between order volume and delivery performance to distinguish between capacity vs. process issues.
+   
+  - **SLA Compliance Analysis:** Benchmarked performance across different shipping tiers.
 
-* **Methodology:**
-  * Data Cleaning: Standardized datetime objects and binary target variables (Late Delivery).
-  * Segmentation: Categorized states into "Key Accounts" vs. "Long-tail" for targeted diagnostic.
+### 🔍 Key Insights
 
-## 5. How to Reproduce
+1. **"First Class" Shipping Failure:** Priority shipping modes exhibit delay rates comparable to standard modes, indicating a breakdown in the "Priority Lane" operational process.
 
-* Clone this repository.
-* Download the dataset from the Kaggle link in Section 3.
-* Open Analytics_Notebook.ipynb and run all cells sequentially.
+2. **Geographic Concentration:** Identified specific states as hotspots where delays are localized, regardless of total order volume.
+
+3. **Seasonality Bottleneck:** Delay rates spike significantly in Q4, revealing a lack of system elasticity during peak demand periods.
+
+4. **Operational vs. Capacity:** Correlation analysis ($r \approx -0.15$) proved that delays are not driven by order volume, but rather by localized operational inefficiencies.
+
+### 💡 Strategic Business Recommendations
+
+1. **Restructure "First Class" Workflow:** Implement a dedicated priority sorting lane at regional hubs to ensure expedited orders meet their SLA commitments.
+
+2. **Resource Allocation for Hotspots:** Redirect infrastructure investment or re-negotiate 3PL contracts specifically for the top 5 states identified in the Pareto analysis.
+
+3. **Peak Season Elasticity Plan:** Scale temporary labor or expand transit warehouse capacity starting in early October to mitigate the Q4 seasonal surge.
+
+4. **Real-time Monitoring:** Develop a triggered alert system for the Central Asia region when a state's late rate exceeds a 60% threshold.
+
+### 🤝 Contributing & Feedback
+
+I welcome any feedback, questions, or suggestions to improve this diagnostic model!
+
+* **Feedback:** If you have insights on the methodology or business recommendations, please feel free to open an Issue or reach out via LinkedIn.
+
+* **Contribute:** If you'd like to improve the code or visualizations, forks and Pull Requests are more than welcome.
+
+### 📂 Repository Structure
+
+* **Analytics_Notebook.ipynb:** Detailed Jupyter Notebook containing data cleaning, EDA, and statistical testing.
+
+* **data/:** Directory containing the raw Kaggle dataset.
+
+* **images/:** Exported visualizations (Pareto charts, Heatmaps, Trend lines).
+
+### 👤 Contact Information
+
+* **Name:** Phan Thi Thuy Anh
+
+* **LinkedIn:** https://www.linkedin.com/in/blessed-thuy-anh/
+
+* **Email:** thuyanhptta@gmail.com
